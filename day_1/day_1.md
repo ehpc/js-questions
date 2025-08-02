@@ -55,7 +55,7 @@ console.log(example.bar); // Случайное число
 Необходимо создать функцию, которая бы принимала шаблон и объект с данными, а возвращала бы конечную строку.
 
 ```js
-format('Hello ${name}! May age is ${age * day_2}.', {name: 'Bob', age: 12}); // 'Hello Bob! My age is 24.'
+format('Hello ${name}! My age is ${age * 12}.', {name: 'Bob', age: 2}); // 'Hello Bob! My age is 24.'
 ```
 
 ## 4. Реализация функции аналогичной Promise.allSettled
