@@ -69,3 +69,22 @@ allSettled([1, Promise.resolve(2), Promise.reject(3)]).then(([v1, v2, v3]) => {
   console.log(v3); // {status: 'rejected', reason: 3}
 });
 ```
+
+## 5. Реализация функции аналогичной Promise.any
+
+```js
+any([Promise.reject(1), Promise.resolve(2), 3]).then((res) => {
+  console.log(res); // 2
+});
+```
+
+## 6. Реализация функции аналогичной Promise.race
+
+```js
+race([Promise.resolve(2), 3]).then((res) => {
+  console.log(res); // 2
+});
+race([Promise.reject(1), Promise.resolve(2), 3]).catch((reason) => {
+  console.log(reason); // 1
+});
+```

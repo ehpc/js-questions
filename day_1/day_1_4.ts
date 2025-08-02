@@ -11,27 +11,22 @@ function allSettled(promises: any[]): Promise<any> {
         let count = 0;
         const results: PromiseState[] = [];
         for (let i = 0; i < promises.length; i++) {
-            if (promises[i]?.then) {
-                promises[i].then((value) => {
+            Promise.resolve(promises[i]).then(
+                (value) => {
                     count += 1;
                     results[i] = {status: 'fullfilled', value};
                     if (count === promises.length) {
                         resolve(results);
                     }
-                }).catch((reason) => {
+                },
+                (reason) => {
                     count += 1;
                     results[i] = {status: 'rejected', reason};
                     if (count === promises.length) {
                         resolve(results);
                     }
-                });
-            } else {
-                count += 1;
-                results[i] = {status: 'fullfilled', value: promises[i]};
-                if (count === promises.length) {
-                    resolve(results);
                 }
-            }
+            );
         }
     });
 }
