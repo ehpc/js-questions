@@ -26,7 +26,7 @@ const obj = {};
 setByPath(obj, 'foo.bar', 1);
 setByPath(obj, 'foo.bla', 2);
 
-console.log(obj); // {foo: {bar: day_1, bla: day_2}}
+console.log(obj); // {foo: {bar: 1, bla: 2}}
 ```
 
 ## 3. Нахождение максимальной глубины в дереве
@@ -48,7 +48,7 @@ const obj = {
   ]
 };
 
-console.log(maxDepth(obj)); // day_2
+console.log(maxDepth(obj)); // 2
 ```
 
 ## 4. Реализация функции аналогичной parseInt
