@@ -17,7 +17,7 @@ function cbDiv(a, b, cb) {
 
 const promiseDiv = promisify(cbDiv);
 
-promiseDiv(1, 2).then(console.log);  // 0.day_5
+promiseDiv(1, 2).then(console.log);  // 0.5
 promiseDiv(1, 0).catch(console.log); // TypeError('Нельзя делить на 0')
 ```
 
