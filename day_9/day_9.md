@@ -42,5 +42,5 @@ console.log(cache.has('key2')); // false
 Необходимо написать функцию, которая бы принимала бы строку и "схлопывала" бы все подряд идущие повторения.
 
 ```js
-console.log(zipStr('abbaabbafffbezza')); // abafbeza
+console.log(zipStr('abbaabbafffbezza')); // ababafbeza
 ```
