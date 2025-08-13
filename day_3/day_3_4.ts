@@ -44,3 +44,5 @@ console.log('2nd run: ', ...zipped); // nothing
 const generatorZipped = generatorZip(new Set([1, 2]), ['a', 'b', 'z'], '...');
 console.log('1st run: ', ...generatorZipped); // [1, 'a', '.'] [2, 'b', '.']
 console.log('2nd run: ', ...generatorZipped); // nothing
+
+export {};
