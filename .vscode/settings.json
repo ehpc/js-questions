@@ -1,0 +1,6 @@
+{
+  "github.copilot.enable": {
+    "javascript": false,
+    "typescript": false
+  }
+}
